@@ -34,7 +34,11 @@ import SocNetlike from './SocNetlike.vue'
         },
         methods: {
             onSend(){
-                
+                //this.messageArray.push({title:this.userMessage});
+                this.$emit('push',{
+                    id:this.counter++,
+                    title:this.userMessage
+                })
             }
         }
     }
