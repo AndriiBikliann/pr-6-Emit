@@ -2,16 +2,21 @@
   <div id="app">
       <SocNet :array="messageArray" 
       @push="push1"/>
+
+   <game-number/>
+
   </div>
 </template>
 
 <script>
-import SocNet from './components/SocNet'
+import SocNet from './components/SocialNetwork/SocNet.vue'
+import GameNumber from './components/Game/GameNumber.vue'
 
 export default {
   name: 'App',
   components: {
-    SocNet
+    SocNet,
+    GameNumber
   },
   data() {
     return {
